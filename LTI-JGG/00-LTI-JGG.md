@@ -9,22 +9,23 @@
 
 ## A. Descripción breve del software LTI
 
-**¿Qué es LTI?**
+### ¿Qué es LTI?
+
 LTI es un **Applicant Tracking System (ATS)** de nueva generación que combina **pipelines inteligentes**, **colaboración ligera** y **asistencia de IA** para acelerar y mejorar la toma de decisiones en reclutamiento.
 
-**Problema que resuelve**
+### Problema que resuelve**
 
 * Procesos lentos e inconsistentes entre HR y managers.
 * Falta de visibilidad en el estado real de las vacantes.
 * Tareas administrativas repetitivas que consumen tiempo (emails, resúmenes, publicaciones).
 
-**Propuesta de valor (MVP)**
+### Propuesta de valor (MVP)
 
 * **Velocidad operativa**: mover candidatos por etapas con un click y auditar el proceso con un timeline simple.
 * **Colaboración mínima y útil**: notas y valoraciones integradas en cada aplicación.
 * **IA pragmática**: generación de textos (JD, resúmenes, emails) con trazabilidad simple.
 
-**Ventajas competitivas**
+### Ventajas competitivas
 
 * **Simplicidad enfocada al “time-to-hire”**: modelo de datos y UI centrados en el pipeline, no en la plataforma.
 * **Escalabilidad sin rehacer**: base de eventos ligera (`ApplicationEvent`) que permite crecer hacia reglas, notificaciones y feed avanzado.
@@ -58,7 +59,7 @@ flowchart LR
     Vent[Ventaja competitiva<br/>• Simplicidad enfocada<br/>• Base de eventos extensible] --> PV
 ```
 
-**Tabla resumen**
+### Tabla resumen
 
 | Bloque             | Contenido                                           |
 | ------------------ | --------------------------------------------------- |
@@ -265,7 +266,7 @@ flowchart TD
     Core -.textos generados .-> IA
 ```
 
-**Estrategia de despliegue y evolución**
+### Estrategia de despliegue y evolución
 
 * MVP sin colas ni workers.
 * Cuando sea necesario: **Outbox + Worker** para notificaciones/reglas; mínima migración.
